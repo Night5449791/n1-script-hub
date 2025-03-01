@@ -86,6 +86,53 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local Tab = Window:CreateTab("The Robloxia:Until Dawn 直到黎明", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Nexer Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Pro666Pro/NexerHub-TR-UD/refs/heads/main/NHTRUD.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Forest Fire",
+   Callback = function()
+   _G.skip = "no" -- "yes" or "no"
+loadstring(game:HttpGet("https://gitlab.com/RobloxiaUntilDawn/robloxia-until-dawn/-/raw/main/Loader?ref_type=heads"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Dead Rails 死铁轨", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Evo Hub(卡密)",
+   Callback = function()
+   loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/ceb24de9b904ec47a09f3852bca017e6.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Rinns Hub(卡密)",
+   Callback = function()
+   loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e1cfd93b113a79773d93251b61af1e2f.lua"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Forsaken 被遗弃", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Fartsaken(需要卡密)",
+   Callback = function()
+   if getgenv then
+    getgenv().DebugNotifications = "false"
+    getgenv().TrackMePlease = "true"
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ivannetta/ShitScripts/main/forsaken.lua"))()
+   end,
+})
+
 local Tab = Window:CreateTab("GreenVille", 4483362458) -- Title, Image
 
 local Button = Tab:CreateButton({
