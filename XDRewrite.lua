@@ -1,10 +1,10 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "XD Script Window",
+   Name = "Rayfield Example Window",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "XD Script (Rayfield)",
-   LoadingSubtitle = "V1",
+   LoadingTitle = "XD Script Rewrite (Rayfield)",
+   LoadingSubtitle = "V1.5",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
@@ -17,24 +17,31 @@ local Window = Rayfield:CreateWindow({
    },
 
    Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "b25uFv64S6", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
       Title = "卡密系统(测试)",
-      Subtitle = "Rizz",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      Subtitle = "简易卡密(永久)",
+      Note = "测试中", -- Use this to tell the user how to get a key
       FileName = "XDRkey", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Rizz"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://pastebin.com/raw/gVdJD173"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
 local Tab = Window:CreateTab("通用", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Sirius Menu",
+   Callback = function()
+   loadstring(game:HttpGet('https://sirius.menu/script'))()
+   end,
+})
 
 local Button = Tab:CreateButton({
    Name = "飞行 V3",
