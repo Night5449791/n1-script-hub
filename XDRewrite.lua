@@ -65,13 +65,18 @@ local Button = Tab:CreateButton({
 })
 
 local Button = Tab:CreateButton({
-   Name = "HwID/硬件码(查看Console)",
+   Name = "Saveinstance",
    Callback = function()
-   local HwID = game:GetService("RbxAnalyticsService"):GetClientId()
+   local Params = {
+	RepoURL = "https://raw.githubusercontent.com/rbxlx/SynSaveInstance/main/",
+	SSI = "saveinstance",
+}
 
-print("你的HwID:", HwID)
+local synsaveinstance = loadstring(game:HttpGet(Params.RepoURL .. Params.SSI .. ".luau", true), Params.SSI)()
 
-print("你的HwID已被Print")
+local CustomOptions = { SafeMode = true, SaveBytecode = true }
+
+synsaveinstance(CustomOptions)
    end,
 })
 
