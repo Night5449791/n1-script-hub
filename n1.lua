@@ -1,10 +1,10 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "XD Script Window",
+   Name = "N1 窗口",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "XD Script Rewrite (Rayfield)",
-   LoadingSubtitle = "V1.5.1",
+   LoadingTitle = "N1脚本中心 (Rayfield)",
+   LoadingSubtitle = "V1.5.2",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
@@ -24,9 +24,9 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
-      Title = "卡密系统(测试)",
-      Subtitle = "Removed",
-      Note = "空格", -- Use this to tell the user how to get a key
+      Title = "",
+      Subtitle = "",
+      Note = "", -- Use this to tell the user how to get a key
       FileName = "XDRkey", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
